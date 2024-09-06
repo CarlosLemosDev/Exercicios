@@ -1,0 +1,18 @@
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("digite um número");
+            double numero = double.Parse(Console.ReadLine());
+            // Escolha do if/else para definir ler se é positivo ou negativo//
+            if (numero >= 1)
+            {
+                Console.WriteLine("Seu número é positivo");
+            }
+            else
+            {
+                Console.WriteLine("Seu número é negativo");
+            }
+        }
+    }
+}
