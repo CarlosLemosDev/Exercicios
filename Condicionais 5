@@ -1,0 +1,26 @@
+Console.WriteLine("Informe um número");
+Double N1 = Double.Parse((Console.ReadLine()));
+Console.WriteLine("Infome outro número");
+Double N2 = Double.Parse((Console.ReadLine()));
+Console.WriteLine("Informe um operador:");
+Char op  = Char.Parse((Console.ReadLine()));
+double R = 0;
+switch (op)
+{
+    case '+':
+        R = N1 + N2;    
+        break;
+    case '-':
+        R = N1 - N2;
+        break;
+    case '*':
+        R = N1 * N2;
+        break;
+    case '/':
+        R = N1 / N2;
+        break;  
+    default: 
+        Console.WriteLine("Operador não existe");
+        break;
+}
+Console.WriteLine("Resultado da operação:" + R);
