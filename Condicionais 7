@@ -1,0 +1,15 @@
+Console.WriteLine("Escreva quantos graus");
+double grau = double.Parse(Console.ReadLine());
+double FAR = grau * 1.8  + 32;
+if (grau <= 0)
+{
+    Console.WriteLine("FRIO DEMAAAAAAAAIS");
+}
+else if (grau >= 0 && grau <= 30)
+{
+    Console.WriteLine("Tempo bom");
+}
+else
+{
+    Console.WriteLine("QUENTE DEMAAAAAAIS");
+}
