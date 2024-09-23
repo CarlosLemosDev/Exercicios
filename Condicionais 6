@@ -1,0 +1,17 @@
+Console.WriteLine("Digite seu nome");
+string nome = Console.ReadLine();
+Console.WriteLine("Digite sua primeira nota");
+int N1 = int.Parse((Console.ReadLine()));
+Console.WriteLine("Digite sua segunda nota");
+int N2 = int.Parse((Console.ReadLine()));
+Console.WriteLine("Digite sua terceira nota");
+int N3 = int.Parse((Console.ReadLine()));
+
+double media = N1 + N2 + N3 / 3;
+
+if (media >= 7)
+    Console.WriteLine( nome +  "APROVADO");
+else if (media <7 && media >= 5) 
+    Console.WriteLine( nome +  "RECUPERAÇÃO");
+else if (media  < 5)  
+    Console.WriteLine( no
