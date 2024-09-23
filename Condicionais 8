@@ -1,0 +1,31 @@
+Console.WriteLine("Digite quantas horas trabalhadas");
+double horas = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite seu salário per hora");
+double salario = double.Parse(Console.ReadLine());
+double c = horas * salario; 
+double s = c * 28;
+double desconto;
+double sbruto;
+if (s <= 900)
+{
+    desconto = s * 0.09;
+    Console.WriteLine(desconto);
+    sbruto = s - desconto;
+    Console.WriteLine(sbruto);
+}
+else if (s <= 1500)
+{
+    desconto = s * 0.10;
+    Console.WriteLine(desconto);
+    Console.WriteLine(s);
+    sbruto = s - desconto;
+    Console.WriteLine(sbruto);
+}
+else if (s >= 2500)
+{
+    desconto = s * 0.11;
+    Console.WriteLine(desconto);
+    Console.WriteLine(s);
+    sbruto = s - desconto;
+    Console.WriteLine(sbruto);
+}
