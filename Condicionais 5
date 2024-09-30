@@ -1,26 +1,49 @@
+// Solicita ao usuário que informe um número
 Console.WriteLine("Informe um número");
+
+// Lê a entrada do usuário e converte de string para double
 Double N1 = Double.Parse((Console.ReadLine()));
-Console.WriteLine("Infome outro número");
+
+// Solicita ao usuário que informe outro número
+Console.WriteLine("Informe outro número");
+
+// Lê a entrada do usuário e converte de string para double
 Double N2 = Double.Parse((Console.ReadLine()));
+
+// Solicita ao usuário que informe um operador
 Console.WriteLine("Informe um operador:");
-Char op  = Char.Parse((Console.ReadLine()));
+
+// Lê a entrada do usuário e converte de string para char
+Char op = Char.Parse((Console.ReadLine()));
+
+// Inicializa a variável para o resultado
 double R = 0;
+
+// Utiliza um switch para determinar a operação com base no operador informado
 switch (op)
 {
     case '+':
+        // Se o operador for '+', soma os dois números
         R = N1 + N2;    
         break;
     case '-':
+        // Se o operador for '-', subtrai o segundo número do primeiro
         R = N1 - N2;
         break;
     case '*':
+        // Se o operador for '*', multiplica os dois números
         R = N1 * N2;
         break;
     case '/':
+        // Se o operador for '/', divide o primeiro número pelo segundo
+        // (note que não há verificação para divisão por zero)
         R = N1 / N2;
         break;  
     default: 
+        // Se o operador não for reconhecido, imprime uma mensagem de erro
         Console.WriteLine("Operador não existe");
         break;
 }
-Console.WriteLine("Resultado da operação:" + R);
+
+// Imprime o resultado da operação
+Console.WriteLine("Resultado da operação: " + R);
