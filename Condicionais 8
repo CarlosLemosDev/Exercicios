@@ -1,31 +1,43 @@
+// Solicita ao usuário que digite a quantidade de horas trabalhadas
 Console.WriteLine("Digite quantas horas trabalhadas");
 double horas = double.Parse(Console.ReadLine());
-Console.WriteLine("Digite seu salário per hora");
+
+// Solicita ao usuário que digite o salário por hora
+Console.WriteLine("Digite seu salário por hora");
 double salario = double.Parse(Console.ReadLine());
-double c = horas * salario; 
-double s = c * 28;
-double desconto;
-double sbruto;
+
+// Calcula o salário total do mês (considerando 28 dias)
+double c = horas * salario; // Salário por dia
+double s = c * 28; // Salário total no mês
+
+double desconto; // Variável para armazenar o desconto
+double sbruto; // Variável para armazenar o salário bruto
+
+// Aplica as regras de desconto com base no salário total
 if (s <= 900)
 {
-    desconto = s * 0.09;
-    Console.WriteLine(desconto);
-    sbruto = s - desconto;
-    Console.WriteLine(sbruto);
+    desconto = s * 0.09; // 9% de desconto
+    Console.WriteLine($"Desconto: {desconto}");
+    sbruto = s - desconto; // Salário após desconto
+    Console.WriteLine($"Salário bruto: {sbruto}");
 }
 else if (s <= 1500)
 {
-    desconto = s * 0.10;
-    Console.WriteLine(desconto);
-    Console.WriteLine(s);
-    sbruto = s - desconto;
-    Console.WriteLine(sbruto);
+    desconto = s * 0.10; // 10% de desconto
+    Console.WriteLine($"Desconto: {desconto}");
+    sbruto = s - desconto; // Salário após desconto
+    Console.WriteLine($"Salário bruto: {sbruto}");
 }
 else if (s >= 2500)
 {
-    desconto = s * 0.11;
-    Console.WriteLine(desconto);
-    Console.WriteLine(s);
-    sbruto = s - desconto;
-    Console.WriteLine(sbruto);
+    desconto = s * 0.11; // 11% de desconto
+    Console.WriteLine($"Desconto: {desconto}");
+    sbruto = s - desconto; // Salário após desconto
+    Console.WriteLine($"Salário bruto: {sbruto}");
 }
+else
+{
+    // Caso não caia em nenhuma das condições anteriores
+    Console.WriteLine("Salário não está dentro das faixas definidas.");
+}
+
