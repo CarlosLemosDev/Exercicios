@@ -1,8 +1,13 @@
+// Solicita ao usuário para informar um ano
+Console.WriteLine("Informe o ano para saber se é bissexto ou não");
 
-Console.WriteLine("Informe o ano para saber se é bissexto ou  não");
+// Lê a entrada do usuário e converte de string para int
 int ano = int.Parse(Console.ReadLine());
+
+// Verifica se o ano é bissexto
 if ((ano % 100 == 0 && ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0))
+    // Se a condição for verdadeira, imprime que o ano é bissexto
     Console.WriteLine("Ele é bissexto");
 else
+    // Se a condição for falsa, imprime que o ano não é bissexto
     Console.WriteLine("Não é bissexto");
-    
