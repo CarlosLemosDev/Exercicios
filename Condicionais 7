@@ -1,15 +1,25 @@
+// Solicita ao usuário que insira uma temperatura em graus Celsius
 Console.WriteLine("Escreva quantos graus");
+
+// Lê a entrada do usuário e converte de string para double
 double grau = double.Parse(Console.ReadLine());
-double FAR = grau * 1.8  + 32;
+
+// Converte a temperatura de Celsius para Fahrenheit
+double FAR = grau * 1.8 + 32;
+
+// Verifica a temperatura e imprime uma mensagem apropriada
 if (grau <= 0)
 {
+    // Se a temperatura for menor ou igual a 0, imprime que está muito frio
     Console.WriteLine("FRIO DEMAAAAAAAAIS");
 }
-else if (grau >= 0 && grau <= 30)
+else if (grau > 0 && grau <= 30)
 {
+    // Se a temperatura estiver entre 0 e 30, imprime que o tempo está bom
     Console.WriteLine("Tempo bom");
 }
 else
 {
+    // Se a temperatura for acima de 30, imprime que está muito quente
     Console.WriteLine("QUENTE DEMAAAAAAIS");
 }
