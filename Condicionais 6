@@ -1,17 +1,27 @@
+// Solicita ao usuário que digite seu nome
 Console.WriteLine("Digite seu nome");
 string nome = Console.ReadLine();
+
+// Solicita ao usuário que digite a primeira nota
 Console.WriteLine("Digite sua primeira nota");
 int N1 = int.Parse((Console.ReadLine()));
+
+// Solicita ao usuário que digite a segunda nota
 Console.WriteLine("Digite sua segunda nota");
 int N2 = int.Parse((Console.ReadLine()));
+
+// Solicita ao usuário que digite a terceira nota
 Console.WriteLine("Digite sua terceira nota");
 int N3 = int.Parse((Console.ReadLine()));
 
-double media = N1 + N2 + N3 / 3;
+// Calcula a média das notas
+// IMPORTANTE: A fórmula deve ser corrigida para garantir que a soma das notas seja dividida corretamente
+double media = (N1 + N2 + N3) / 3.0; // Adicionando parênteses para calcular a soma antes da divisão
 
+// Verifica a média e imprime o resultado correspondente
 if (media >= 7)
-    Console.WriteLine( nome +  "APROVADO");
-else if (media <7 && media >= 5) 
-    Console.WriteLine( nome +  "RECUPERAÇÃO");
-else if (media  < 5)  
-    Console.WriteLine( no
+    Console.WriteLine(nome + " APROVADO");
+else if (media < 7 && media >= 5)
+    Console.WriteLine(nome + " RECUPERAÇÃO");
+else if (media < 5)
+    Console.WriteLine(nome + " REPROVADO"); // Corrigido: adicionando "REPROVADO" no final
