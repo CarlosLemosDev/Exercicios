@@ -1,0 +1,15 @@
+//O número 3025 tem a seguinte propriedade: 30 + 25 = 55 e 55 x 55 = 3025.
+//Faça um algoritmo que calcule e imprima quais os números entre 1000 e 9999 também
+//possuem esta mesma propriedade.
+for (int i = 1000; i < 9999; i++)
+{
+    int divisao = i / 100;
+    int resto = i % 100;
+    int soma = divisao + resto;
+    int mult = soma * soma;
+    if (mult == i)
+    {
+        Console.WriteLine(i);
+    }
+        
+}
