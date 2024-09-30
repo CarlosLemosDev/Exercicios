@@ -1,10 +1,19 @@
+// Solicita ao usuário que informe sua idade
 Console.WriteLine("Informe sua IDADE");
+
+// Lê a entrada do usuário e converte de string para int
 int idade = int.Parse(Console.ReadLine());
+
+// Verifica a faixa etária com base na idade informada
 if (idade <= 12)
+    // Se a idade for 12 ou menos, imprime que a pessoa é uma criança
     Console.WriteLine("Você é uma criança");
-else if (idade <= 17 )
+else if (idade <= 17)
+    // Se a idade for entre 13 e 17, imprime que a pessoa é um adolescente
     Console.WriteLine("Você é um adolescente");
 else if (idade <= 64)
-    Console.WriteLine("Vocé é um adulto");
+    // Se a idade for entre 18 e 64, imprime que a pessoa é um adulto
+    Console.WriteLine("Você é um adulto");
 else
-    Console.WriteLine("Vocé é um idoso");
+    // Se a idade for 65 ou mais, imprime que a pessoa é um idoso
+    Console.WriteLine("Você é um idoso");
