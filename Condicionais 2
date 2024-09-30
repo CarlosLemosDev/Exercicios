@@ -1,34 +1,46 @@
     internal class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // Solicita ao usuário o primeiro número e faz a conversão de string para double
+        Console.WriteLine("Digite o primeiro número");
+        double N1 = Double.Parse(Console.ReadLine());
+        
+        // Solicita ao usuário o segundo número
+        Console.WriteLine("Digite o segundo número");
+        double N2 = Double.Parse(Console.ReadLine());
+        
+        // Solicita ao usuário o terceiro número
+        Console.WriteLine($"Digite o terceiro");
+        double N3 = Double.Parse(Console.ReadLine());
+        
+        // Verifica se N1 é maior que N2 e N3 é maior que N2
+        if (N1 > N2 && N3 > N2) 
         {
-            Console.WriteLine("Digite o primeiro número");
-            double N1 = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o segundo número");
-            double N2 = Double.Parse(Console.ReadLine());
-            Console.WriteLine($"Digite o terceiro");
-            double N3 = Double.Parse(Console.ReadLine());
-            if (N1 > N2 && N3 > N2) 
-            {
-                Console.WriteLine($"Seu maior número é {N1}");
-                Console.WriteLine($"Seu menor número é {N2}");
-            }
-            if (N2 > N1 && N1 > N3)
-            {
-                Console.WriteLine($"Seu maior número é {N2}");
-                Console.WriteLine($"Seu menor número é {N3}");
-            }
-            if (N3 > N1 && N2 > N1) 
-            {
-                Console.WriteLine($"Seu maior número é {N3}");
-                Console.WriteLine($"Seu menor número é {N1}");
-            }
-            else  
-            {
-                Console.WriteLine("Não tem números maiores");
-            }
+            // Se a condição for verdadeira, imprime o maior e o menor
+            Console.WriteLine($"Seu maior número é {N1}");
+            Console.WriteLine($"Seu menor número é {N2}");
+        }
+        
+        // Verifica se N2 é maior que N1 e N1 é maior que N3
+        if (N2 > N1 && N1 > N3)
+        {
+            // Se a condição for verdadeira, imprime o maior e o menor
+            Console.WriteLine($"Seu maior número é {N2}");
+            Console.WriteLine($"Seu menor número é {N3}");
+        }
+        
+        // Verifica se N3 é maior que N1 e N2 é maior que N1
+        if (N3 > N1 && N2 > N1) 
+        {
+            // Se a condição for verdadeira, imprime o maior e o menor
+            Console.WriteLine($"Seu maior número é {N3}");
+            Console.WriteLine($"Seu menor número é {N1}");
+        }
+        else  
+        {
+            // Caso nenhuma das condições anteriores seja verdadeira
+            Console.WriteLine("Não tem números maiores");
         }
     }
 }
-
-
