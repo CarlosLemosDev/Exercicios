@@ -1,33 +1,49 @@
+// Exibe uma mensagem solicitando ao usuário que insira um número.
 Console.WriteLine("DIGITE UM NUMERO para saber o dia da semana");
+
+// Lê a entrada do usuário como uma string e tenta convertê-la para um número inteiro.
+// A função int.Parse() converte a string lida pelo Console.ReadLine() em um inteiro.
+// Se a entrada não for um número válido, isso lançará uma exceção.
 int n = int.Parse(Console.ReadLine());  
+
+// Usa a estrutura switch para verificar o valor do número fornecido e exibir o dia da semana correspondente.
 switch (n)
 {
+    // Se o número for 1, exibe "domingo".
     case 1:
         Console.WriteLine("domingo");
-        break;
+        break;  // O break é necessário para interromper o switch após encontrar o caso correto.
 
+    // Se o número for 2, exibe "segunda-feira".
     case 2:
         Console.WriteLine("segunda-feira");
         break;
 
+    // Se o número for 3, exibe "terça-feira".
     case 3:
         Console.WriteLine("terça-feira");
         break;
 
+    // Se o número for 4, exibe "quarta-feira".
     case 4:
         Console.WriteLine("quarta-feira");
         break;
 
+    // Se o número for 5, exibe "quinta-feira".
     case 5:
         Console.WriteLine("quinta-feira");
         break;
 
+    // Se o número for 6, exibe "sexta-feira".
     case 6:
         Console.WriteLine("sexta-feira");
         break;
 
+    // Se o número for 7, exibe "sábado".
     case 7:
         Console.WriteLine("sábado");
         break;
 
+    // O switch não tem um caso padrão (default), o que significa que se o usuário
+    // inserir um número fora do intervalo de 1 a 7, nada será impresso.
 }
