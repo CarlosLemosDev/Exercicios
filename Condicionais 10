@@ -1,17 +1,35 @@
+// Exibe uma mensagem solicitando ao usuário que insira seu sexo, com as opções 'H' (Homem) ou 'M' (Mulher).
 Console.WriteLine("Digite seu sexo (H) ou (M) ");
+
+// Lê a entrada do usuário como uma string, converte o primeiro caractere em um tipo 'char'.
+// Isso é feito com o char.Parse() para aceitar a entrada de um único caractere, como 'H' ou 'M'.
 char s = char.Parse(Console.ReadLine());
+
+// Exibe uma mensagem solicitando a altura do usuário.
 Console.WriteLine("Digite sua altura");
+
+// Lê a altura fornecida pelo usuário como uma string e a converte em um número do tipo 'double'.
+// Isso é feito com double.Parse() para que a entrada do usuário seja tratada como um número decimal.
 double altura = double.Parse(Console.ReadLine());
+
+// Usa uma estrutura switch para decidir qual fórmula de peso ideal usar com base no sexo do usuário.
 switch (s)
 {
+    // Se o sexo for 'H' (Homem):
     case 'H':
+        // Calcula o peso ideal masculino usando a fórmula (72.7 * altura) - 58.
         double rm = (72.7 * altura) - 58;
+        
+        // Exibe o resultado do peso ideal masculino.
         Console.WriteLine("Peso ideal masculino=" + rm);
         break;
+
+    // Se o sexo for 'M' (Mulher):
     case 'M':
+        // Calcula o peso ideal feminino usando a fórmula (62.1 * altura) - 44.7.
         double rf = (62.1 * altura) - 44.7;
+        
+        // Exibe o resultado do peso ideal feminino.
         Console.WriteLine("Peso ideal feminino=" + rf);
         break;
-
 }
-
